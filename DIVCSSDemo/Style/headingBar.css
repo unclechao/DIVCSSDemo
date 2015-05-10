@@ -5,7 +5,7 @@
 
 .top-nav-wrap {
     width: 100%;
-    min-width:1000px;
+    min-width: 1000px;
     z-index: 9;
     position: absolute;
     left: 0px;
@@ -69,19 +69,19 @@
     padding: 0 2px 0 0;
 }
 
-.top-nav .tn-title .tn-tab i, .top-nav .tn-title .tn-user i {
+    .top-nav .tn-title .tn-tab i, .top-nav .tn-title .tn-user i {
         display: inline-block;
         height: 17px;
         padding: 12px 9px 12px 16px;
         vertical-align: bottom;
         overflow: hidden;
-}
+    }
 
 .tn-person-r .tn-title .tn-tab {
-    border:1px solid #FCFCFC;
-    border-width:0 1px;
-    color:#4c4c4c;
-    display:inline-block;
+    border: 1px solid #FCFCFC;
+    border-width: 0 1px;
+    color: #4c4c4c;
+    display: inline-block;
     line-height: 16px;
     cursor: pointer;
     position: relative;
