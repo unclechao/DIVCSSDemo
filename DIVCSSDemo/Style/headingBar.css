@@ -3,7 +3,7 @@
     font: 20px "微软雅黑","SimSun";
 }
 
-/*最外层div*/
+/*外层div*/
 .top-nav {
     width: 100%;
     min-width: 1000px;
@@ -17,7 +17,7 @@
     background-color: #FCFCFC;
 }
 
-/*第二层div*/
+/*内层div*/
 .tn-header {
     width: 1000px;
     margin: 0 auto;
@@ -25,7 +25,6 @@
     font: "HELVETICA","Microsoft YaHei";
 }
 
-/*第三层div*/
 .top-nav .tn-nav {
     float: left;
     display: inline;
@@ -106,6 +105,7 @@
         display: none;
     }
 
+/*list样式*/
 ul, li {
     padding: 0;
     margin: 0;
