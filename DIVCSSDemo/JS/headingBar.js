@@ -20,12 +20,21 @@ $(function () {
     ///mousemove具体下拉菜单项时
     $(".tn-text-list").mousemove(function () {
         $(this).css("display", "inline");
+    });
 
+    $(".tn-text-list li").mousemove(function () {
+        $(this).css("color", "rgb(253,132,36)");
+        $(this).css("background-color", "rgb(255,245,219)");
     });
 
     ///mouseout具体下拉菜单项时
     $(".tn-text-list").mouseout(function () {
         $(this).css("display", "none");
+    });
+
+    $(".tn-text-list li").mouseout(function () {
+        $(this).css("color", "black");
+        $(this).css("background-color", "#FCFCFC");
     });
 
     ///mouseout title时，改变对应tab样式
