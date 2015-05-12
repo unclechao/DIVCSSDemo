@@ -3,6 +3,7 @@
 }
 
 .login-area {
+    display: none;
     position: absolute;
     width: 400px;
     height: 250px;
@@ -55,14 +56,14 @@
                 height: 30px;
             }
 
-a {
-    font-size: 12px;
-    text-decoration: none;
-}
-a:hover{
-    text-decoration:underline;
-}
+            .login-area .login-list .login-list-right .right-content a {
+                font-size: 12px;
+                text-decoration: none;
+            }
 
+                .login-area .login-list .login-list-right .right-content a:hover {
+                    text-decoration: underline;
+                }
 
 #username {
     width: 200px;
@@ -77,10 +78,7 @@ a:hover{
 }
 
 #btn_login {
-    border: 1px solid red;
     display: inline;
-    width: 220px;
-    height: 100px;
     color: white;
     background-color: #ff8500;
     cursor: pointer;

@@ -9,7 +9,7 @@ $(function () {
         $(this).find(".tn-tab").css("color", "rgb(253,132,36)");
         //mouseover tab时，显示下拉菜单
         $(this).find(".tn-tab").mousemove(function () {
-            $(this).parent(".tn-title").find(".tn-topmenulist").find(".tn-text-list").css("display", "inline");
+            $(this).parent(".tn-title").find(".tn-topmenulist").find(".tn-text-list").css("display", "block");
         });
         //mouseout tab时，隐藏下拉菜单
         $(this).find(".tn-tab").mouseout(function () {
@@ -19,7 +19,7 @@ $(function () {
 
     ///mousemove具体下拉菜单项时
     $(".tn-text-list").mousemove(function () {
-        $(this).css("display", "inline");
+        $(this).css("display", "block");
     });
 
     $(".tn-text-list li").mousemove(function () {
