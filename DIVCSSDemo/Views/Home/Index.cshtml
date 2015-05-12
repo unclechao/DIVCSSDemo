@@ -1,7 +1,9 @@
 ﻿<link href="~/Style/headingBar.css" rel="stylesheet" />
+<link href="~/Style/loginArea.css" rel="stylesheet" />
 <script src="~/JS/jquery-1.8.2.js"></script>
 <script src="~/JS/headingBar.js"></script>
-<link href="~/Style/loginArea.css" rel="stylesheet" />
+<script src="~/JS/loginArea.js"></script>
+
 @{
     ViewBag.Title = "Index";
 }
@@ -51,29 +53,25 @@
                                     <div class="right-content">
                                         <table>
                                             <tr>
-                                                <td colspan="2">
+                                                <td>
                                                     <input type="text" id="username" />
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2">
+                                                <td>
                                                     <input type="password" id="password" />
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <input type="button" id="btn_login" value="登录" />
-                                                </td>
-                                                <td>
-                                                    <input type="checkbox" id="chk_remember">下次自动登录</input>
+                                                    <div id="btn_login">登   录</div>&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" id="chk_remember" style="vertical-align:bottom" />
+                                                    <div style="display:inline;font-size:12px">下次自动登录</div>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <a href="">忘记密码</a>
-                                                </td>
-                                                <td>
-                                                    <a href="">立即注册</a>
+                                                    <a href="">忘记密码</a>&nbsp;&nbsp;&nbsp;<a href="">立即注册</a>
                                                 </td>
                                             </tr>
                                         </table>
