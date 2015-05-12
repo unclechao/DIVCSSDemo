@@ -123,6 +123,7 @@
     <Content Include="JS\jquery-1.8.2.js" />
     <Content Include="JS\jquery-ui-1.8.24.js" />
     <Content Include="Style\headingBar.css" />
+    <Content Include="Style\loginArea.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

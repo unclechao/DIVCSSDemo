@@ -1,0 +1,57 @@
+﻿body {
+    color: #333;
+    font: 20px "微软雅黑","SimSun";
+}
+
+.login-area {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    border: 1px solid #ff8500;
+}
+
+    /*可拖动区域*/
+    .login-area .moving-area {
+        height: 20px;
+    }
+
+    /*登录*/
+    .login-area .login-list {
+        width: 400px;
+        height: 230px;
+        margin-top: 20px;
+    }
+
+        /*左侧二维码登录区域*/
+        .login-area .login-list .login-list-left {
+            float: left;
+            width: 140px;
+            height: 230px;
+            display: inline;
+        }
+
+        /*右侧账号登录区域*/
+        .login-area .login-list .login-list-right {
+            float: right;
+            width: 250px;
+            height: 230px;
+            display: inline;
+        }
+
+            .login-area .login-list .login-list-right .left-content {
+                height: 170px;
+                padding-top: 30px;
+            }
+
+            .login-area .login-list .login-list-right .left-remind {
+                height: 30px;
+            }
+
+            .login-area .login-list .login-list-right .right-content {
+                height: 170px;
+                padding-top: 30px;
+            }
+
+            .login-area .login-list .login-list-right .right-remind {
+                height: 30px;
+            }
