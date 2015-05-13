@@ -85,9 +85,9 @@
     cursor: pointer;
     vertical-align: central;
     text-align: center;
-    /*visibility: hidden;*/
+    visibility: hidden;
     color: blue;
-    z-index: 99;
+    z-index: 99999;
 }
 
 #email {

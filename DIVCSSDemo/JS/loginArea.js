@@ -11,6 +11,7 @@ var oldIndex = 0;
 $(function () {
     //mouseover&mouseout登录按钮时
     $("#login").mouseover(function () {
+        $("#closeIcon").css("visibility", "hidden");
         $(".login-area").css("display", "block").css("top", "42px").css("left", "0px");
         $("#email").val("微博/博客/邮箱/手机").css("color", "rgb(208,208,208)");
         $("#password").get(0).setAttribute("type", "text");
@@ -46,19 +47,28 @@ $(function () {
 
     //email文本框
     $("#email").focus(function () {
-        //$("#closeIcon").css("visibility", "visible");
         if ($("#email").val() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
             $("#email").val("");
         }
         $("#email").css("color", "black");
         $("#auto-show").css("left", "153px").css("top", "133px").css("visibility", "visible");
         $(".right-content-warning").css("visibility", "visible");
-    });
-    $("#email").blur(function () {
+    }).blur(function () {
         $("#auto-show").css("visibility", "hidden");
         $(".right-content-warning").css("visibility", "hidden");
-        //$("#closeIcon").css("visibility", "hidden");
+    }).mouseenter(function () {
+        $("#closeIcon").css("visibility", "visible");
+    }).mouseleave(function () {
+        $("#closeIcon").css("visibility", "hidden");
     });
+
+    //关闭图标
+    $("#closeIcon").mouseenter(function () {
+        $("#closeIcon").css("visibility", "visible");
+    }).mouseleave(function () {
+        $("#closeIcon").css("visibility", "hidden");
+    });
+
 
     //password获得焦点
     $("#password").focus(function () {
