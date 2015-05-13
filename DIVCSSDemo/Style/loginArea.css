@@ -7,7 +7,7 @@
     position: absolute;
     width: 400px;
     height: 250px;
-    border: 1px solid #ff8500;
+    border: 1px solid #FECC5B;
 }
 
     /*可拖动区域*/
@@ -65,13 +65,15 @@
                     text-decoration: underline;
                 }
 
-#username {
+#email {
+    font-size: 12px;
     width: 200px;
     height: 25px;
     border: 1px solid rgb(208,208,208);
 }
 
 #password {
+    font-size: 12px;
     width: 200px;
     height: 25px;
     border: 1px solid rgb(208,208,208);
@@ -82,4 +84,15 @@
     color: white;
     background-color: #ff8500;
     cursor: pointer;
+}
+
+#auto-show {
+    font-size: 12px;
+    visibility: hidden;
+    position: absolute;
+    width: 198px;
+    height: 64px;
+    border: 1px double rgb(208,208,208);
+    background-color: White;
+    overflow: hidden;
 }
