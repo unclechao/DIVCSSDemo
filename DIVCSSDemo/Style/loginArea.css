@@ -8,62 +8,60 @@
     width: 400px;
     height: 250px;
     border: 1px solid #FECC5B;
+    top: 42px;
+    left: 0px;
+    z-index:99;
 }
 
-    /*可拖动区域*/
-    .login-area .moving-area {
-        height: 20px;
-    }
+/*登录*/
+.login-area .login-list {
+    width: 400px;
+    height: 230px;
+    margin-top: 20px;
+}
 
-    /*登录*/
-    .login-area .login-list {
-        width: 400px;
+    /*左侧二维码登录区域*/
+    .login-area .login-list .login-list-left {
+        float: left;
+        width: 140px;
         height: 230px;
-        margin-top: 20px;
+        display: inline;
     }
 
-        /*左侧二维码登录区域*/
-        .login-area .login-list .login-list-left {
-            float: left;
-            width: 140px;
-            height: 230px;
-            display: inline;
+    /*右侧账号登录区域*/
+    .login-area .login-list .login-list-right {
+        float: right;
+        width: 250px;
+        height: 230px;
+        display: inline;
+    }
+
+        .login-area .login-list .login-list-right .left-content {
+            height: 170px;
+            padding-top: 30px;
         }
 
-        /*右侧账号登录区域*/
-        .login-area .login-list .login-list-right {
-            float: right;
-            width: 250px;
-            height: 230px;
-            display: inline;
+        .login-area .login-list .login-list-right .left-remind {
+            height: 30px;
         }
 
-            .login-area .login-list .login-list-right .left-content {
-                height: 170px;
-                padding-top: 30px;
-            }
+        .login-area .login-list .login-list-right .right-content {
+            height: 170px;
+            padding-top: 30px;
+        }
 
-            .login-area .login-list .login-list-right .left-remind {
-                height: 30px;
-            }
+        .login-area .login-list .login-list-right .right-remind {
+            height: 30px;
+        }
 
-            .login-area .login-list .login-list-right .right-content {
-                height: 170px;
-                padding-top: 30px;
-            }
+        .login-area .login-list .login-list-right .right-content a {
+            font-size: 12px;
+            text-decoration: none;
+        }
 
-            .login-area .login-list .login-list-right .right-remind {
-                height: 30px;
+            .login-area .login-list .login-list-right .right-content a:hover {
+                text-decoration: underline;
             }
-
-            .login-area .login-list .login-list-right .right-content a {
-                font-size: 12px;
-                text-decoration: none;
-            }
-
-                .login-area .login-list .login-list-right .right-content a:hover {
-                    text-decoration: underline;
-                }
 
 #email {
     font-size: 12px;
@@ -84,15 +82,15 @@
     color: white;
     background-color: #ff8500;
     cursor: pointer;
-    border:0px;
-    height:30px;
+    border: 0px;
+    height: 30px;
 }
 
 #auto-show {
     font-size: 12px;
     visibility: hidden;
     position: absolute;
-    width: 198px;
+    width: 202px;
     height: 64px;
     border: 1px double rgb(208,208,208);
     background-color: White;

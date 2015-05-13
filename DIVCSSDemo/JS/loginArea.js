@@ -113,7 +113,27 @@ $(function () {
             }
         }
     });
-});
+
+    //movable login area
+    var _move = false;//移动标记  
+    var _x, _y;//鼠标离控件左上角的相对位置  
+    $(".login-area").click(function () {
+    }).mousedown(function (e) {
+        _move = true;
+        _x = e.pageX - parseInt($(".login-area").css("left"));
+        _y = e.pageY - parseInt($(".login-area").css("top"));
+    });
+    $(document).mousemove(function (e) {
+        if (_move) {
+            var x = e.pageX - _x;//移动时根据鼠标位置计算控件左上角的绝对位置  
+            var y = e.pageY - _y;
+            $(".login-area").css({ top: y, left: x });//控件新位置  
+        }
+    }).mouseup(function () {
+        _move = false;
+    });
+
+});//Page load function end
 
 ///==========Function==========
 //给email文本框设置值
