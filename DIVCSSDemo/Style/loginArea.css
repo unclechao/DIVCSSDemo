@@ -84,6 +84,8 @@
     color: white;
     background-color: #ff8500;
     cursor: pointer;
+    border:0px;
+    height:30px;
 }
 
 #auto-show {
