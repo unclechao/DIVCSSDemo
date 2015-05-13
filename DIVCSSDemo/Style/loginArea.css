@@ -8,6 +8,8 @@
     width: 400px;
     height: 250px;
     border: 1px solid #FECC5B;
+    margin-left: -170px;
+    margin-top: -1px;
     top: 42px;
     left: 0px;
     z-index: 99;
@@ -74,6 +76,7 @@
                     text-decoration: underline;
                 }
 
+/*关闭标签*/
 #closeIcon {
     background-color: white;
     width: 18px;
@@ -114,6 +117,7 @@
     height: 30px;
 }
 
+/*智能提示框*/
 #auto-show {
     font-size: 12px;
     visibility: hidden;
