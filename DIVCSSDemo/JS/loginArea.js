@@ -11,9 +11,11 @@ var oldIndex = 0;
 $(function () {
     //mouseover&mouseout登录按钮时
     $("#login").mouseover(function () {
-        $(".login-area").css("display", "block");
-    });
-    $("#login").mouseout(function () {
+        $(".login-area").css("display", "block").css("top", "42px").css("left", "0px");
+        $("#email").val("微博/博客/邮箱/手机").css("color", "rgb(208,208,208)");
+        $("#password").get(0).setAttribute("type", "text");
+        $("#password").val("请输入密码").css("color", "rgb(208,208,208)");
+    }).mouseout(function () {
         $(".login-area").css("display", "none");
     });
 
@@ -29,20 +31,33 @@ $(function () {
             $("#password").val("请输入密码");
             $("#password").css("color", "rgb(208,208,208)");
         }
-    });
-    $(".login-area").mouseout(function () {
+    }).mouseout(function () {
         $(".login-area").css("display", "none");
     });
 
-    //email获得焦点
+    //close icon 标签
+    $("#closeIcon").mouseover(function () {
+        $("#closeIcon").css("color", "red");
+    }).mouseout(function () {
+        $("#closeIcon").css("color", "blue");
+    }).click(function () {
+        $("#email").val("");
+    });
+
+    //email文本框
     $("#email").focus(function () {
-        if ($("#email").val() == "" || $("#email").val() == "微博/博客/邮箱/手机")
+        //$("#closeIcon").css("visibility", "visible");
+        if ($("#email").val() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
             $("#email").val("");
+        }
         $("#email").css("color", "black");
-        $("#auto-show").css("left", "153px").css("top", "108px").css("visibility", "visible");
+        $("#auto-show").css("left", "153px").css("top", "133px").css("visibility", "visible");
+        $(".right-content-warning").css("visibility", "visible");
     });
     $("#email").blur(function () {
         $("#auto-show").css("visibility", "hidden");
+        $(".right-content-warning").css("visibility", "hidden");
+        //$("#closeIcon").css("visibility", "hidden");
     });
 
     //password获得焦点
@@ -52,22 +67,21 @@ $(function () {
         $("#password").css("color", "black");
     });
 
-    //邮箱提示下拉框
-    $("#auto-show").mouseover(function () {
-        $("#auto-show").css("visibility", "visible");
-    });
-    $("#auto-show").mouseout(function () {
-        $("#auto-show").css("visibility", "hidden");
-    });
-    $("#auto-show").focus(function () {
-        $("#auto-show").css("visibility", "visible");
-    });
+    ////邮箱提示下拉框
+    //$("#auto-show").mouseover(function () {
+    //    $("#auto-show").css("visibility", "visible");
+    //});
+    //$("#auto-show").mouseout(function () {
+    //    $("#auto-show").css("visibility", "hidden");
+    //});
+    //$("#auto-show").focus(function () {
+    //    $("#auto-show").css("visibility", "visible");
+    //});
 
     //登录按钮
     $("#btn_login").mouseover(function () {
         $("#btn_login").css("background-color", "rgb(253,147,49)");
-    });
-    $("#btn_login").mouseout(function () {
+    }).mouseout(function () {
         $("#btn_login").css("background-color", "#ff8500");
     });
 
@@ -132,7 +146,6 @@ $(function () {
     }).mouseup(function () {
         _move = false;
     });
-
 });//Page load function end
 
 ///==========Function==========
