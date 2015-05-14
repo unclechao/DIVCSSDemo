@@ -51,20 +51,22 @@ $(function () {
             $("#email").val("");
         }
         $("#email").css("color", "black");
-        $("#auto-show").css("left", "153px").css("top", "133px").css("visibility", "visible");
         $(".right-content-warning").css("visibility", "visible");
     }).blur(function () {
         $("#auto-show").css("visibility", "hidden");
         $(".right-content-warning").css("visibility", "hidden");
+        if ($("#email").val().trim() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
+            $("#email").val("微博/博客/邮箱/手机").css("color", "rgb(208,208,208)");
+        }
     }).mouseover(function () {
         $("#closeIcon").css("visibility", "visible");
         if ($("#email").val().trim() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
             $("#email").val(" ");
         }
     }).mouseout(function () {
-        $("#closeIcon").css("visibility", "hidden");
         if ($("#email").val().trim() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
             $("#email").val("微博/博客/邮箱/手机").css("color", "rgb(208,208,208)");
+            $("#closeIcon").css("visibility", "hidden");
         }
     });
 
@@ -84,6 +86,11 @@ $(function () {
         $("#passwordReal").css("display", "block").val("");
     });
     $("#passwordReal").mouseout(function () {
+        if ($("#passwordReal").val() == "") {
+            $("#password").css("display", "block");
+            $("#passwordReal").css("display", "none");
+        }
+    }).blur(function () {
         if ($("#passwordReal").val() == "") {
             $("#password").css("display", "block");
             $("#passwordReal").css("display", "none");
@@ -139,6 +146,7 @@ $(function () {
                 $("div #" + i).text("").text(newVal + emailList[i - 1]);
             }
         }
+        $("#auto-show").css("left", "153px").css("top", "133px").css("visibility", "visible");
     });
 
     //movable login area
