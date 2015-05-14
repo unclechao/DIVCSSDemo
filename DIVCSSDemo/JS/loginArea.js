@@ -47,7 +47,7 @@ $(function () {
 
     //email文本框
     $("#email").focus(function () {
-        if ($("#email").val() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
+        if ($("#email").val().trim() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
             $("#email").val("");
         }
         $("#email").css("color", "black");
@@ -56,16 +56,16 @@ $(function () {
     }).blur(function () {
         $("#auto-show").css("visibility", "hidden");
         $(".right-content-warning").css("visibility", "hidden");
-    }).mouseenter(function () {
+    }).mouseover(function () {
         $("#closeIcon").css("visibility", "visible");
-    }).mouseleave(function () {
+    }).mouseout(function () {
         $("#closeIcon").css("visibility", "hidden");
     });
 
     //关闭图标
-    $("#closeIcon").mouseenter(function () {
+    $("#closeIcon").mouseover(function () {
         $("#closeIcon").css("visibility", "visible");
-    }).mouseleave(function () {
+    }).mouseout(function () {
         $("#closeIcon").css("visibility", "hidden");
     });
 
