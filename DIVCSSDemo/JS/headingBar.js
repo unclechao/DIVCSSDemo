@@ -7,11 +7,11 @@ $(function () {
     $(".tn-title").mouseover(function () {
         $(this).find(".tn-tab").css("background-color", "rgb(237,238,240)");
         $(this).find(".tn-tab").css("color", "rgb(253,132,36)");
-        //mouseover tab时，显示下拉菜单
+        //mouseover显示下拉菜单
         $(this).find(".tn-tab").mousemove(function () {
             $(this).parent(".tn-title").find(".tn-topmenulist").find(".tn-text-list").css("display", "block");
         });
-        //mouseout tab时，隐藏下拉菜单
+        //mouseout隐藏下拉菜单
         $(this).find(".tn-tab").mouseout(function () {
             $(this).parent(".tn-title").find(".tn-topmenulist").find(".tn-text-list").css("display", "none");
         });
@@ -42,4 +42,5 @@ $(function () {
         $(this).find(".tn-tab").css("background-color", "#FCFCFC");
         $(this).find(".tn-tab").css("color", "black");
     });
+
 });

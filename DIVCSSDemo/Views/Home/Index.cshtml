@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+﻿<!DOCTYPE html>
 
 <link href="~/Style/headingBar.css" rel="stylesheet" />
 <link href="~/Style/loginArea.css" rel="stylesheet" />
@@ -43,7 +43,7 @@
                 @*right area*@
                 <div class="tn-title">
                     <a class="tn-tab" id="login">登录</a>
-                    <div class="login-area">
+                    <div class="login-area"><div id="closeIcon4Area">X</div>
                         <div class="login-list">
                             <div class="login-list-left">
                                 <div class="right-remind" style="text-align :center">扫描二维码安全登录</div>
@@ -62,7 +62,8 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <input type="text" id="password" />
+                                                <input type="text" id="password" value="请输入密码" />
+                                                <input type="password" id="passwordReal" />
                                             </td>
                                         </tr>
                                         <tr>

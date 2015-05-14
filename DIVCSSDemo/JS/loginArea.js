@@ -9,13 +9,13 @@ var oldIndex = 0;
 
 ///==========Page Load==========
 $(function () {
-    //mouseover&mouseout登录按钮时
+    //鼠标在heading bar上的login时
     $("#login").mouseover(function () {
         $("#closeIcon").css("visibility", "hidden");
         $(".login-area").css("display", "block").css("top", "42px").css("left", "0px");
         $("#email").val("微博/博客/邮箱/手机").css("color", "rgb(208,208,208)");
-        $("#password").get(0).setAttribute("type", "text");
-        $("#password").val("请输入密码").css("color", "rgb(208,208,208)");
+        $("#passwordReal").css("display", "none");
+        $("#password").css("display", "block");
     }).mouseout(function () {
         $(".login-area").css("display", "none");
     });
@@ -27,13 +27,6 @@ $(function () {
             $("#email").val("微博/博客/邮箱/手机");
             $("#email").css("color", "rgb(208,208,208)");
         }
-        if ($("#password").val() == "") {
-            $("#password").get(0).setAttribute("type", "text");
-            $("#password").val("请输入密码");
-            $("#password").css("color", "rgb(208,208,208)");
-        }
-    }).mouseout(function () {
-        $(".login-area").css("display", "none");
     });
 
     //close icon 标签
@@ -43,6 +36,13 @@ $(function () {
         $("#closeIcon").css("color", "blue");
     }).click(function () {
         $("#email").val("");
+    });
+    $("#closeIcon4Area").click(function () {
+        $(".login-area").css("display", "none");
+    }).mouseover(function () {
+        $("#closeIcon4Area").css("color", "red");
+    }).mouseout(function () {
+        $("#closeIcon4Area").css("color", "black");
     });
 
     //email文本框
@@ -69,24 +69,20 @@ $(function () {
         $("#closeIcon").css("visibility", "hidden");
     });
 
-
-    //password获得焦点
-    $("#password").focus(function () {
-        $("#password").val("");
-        $("#password").get(0).setAttribute("type", "password");
-        $("#password").css("color", "black");
+    //password事件
+    $("#password").mouseover(function () {
+        $("#password").css("display", "none");
+        $("#passwordReal").css("display", "block").val("");
+    }).focus(function () {
+        $("#password").css("display", "none");
+        $("#passwordReal").css("display", "block").val("");
     });
-
-    ////邮箱提示下拉框
-    //$("#auto-show").mouseover(function () {
-    //    $("#auto-show").css("visibility", "visible");
-    //});
-    //$("#auto-show").mouseout(function () {
-    //    $("#auto-show").css("visibility", "hidden");
-    //});
-    //$("#auto-show").focus(function () {
-    //    $("#auto-show").css("visibility", "visible");
-    //});
+    $("#passwordReal").mouseout(function () {
+        if ($("#passwordReal").val() == "") {
+            $("#password").css("display", "block");
+            $("#passwordReal").css("display", "none");
+        }
+    });
 
     //登录按钮
     $("#btn_login").mouseover(function () {
