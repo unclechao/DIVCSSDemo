@@ -133,9 +133,10 @@ $(function () {
         }
         //如果按下退格键或删除键
         if (keyCode == 8 || keyCode == 46) {
-            emailInput.val("");
+            var newVal = emailInput.val().substring(0, emailInput.val().length);
+            emailInput.val(newVal);
             for (var i = 1; i <= 6; i++) {
-                $("div #" + i).text("").text(emailList[i - 1]);
+                $("div #" + i).text("").text(newVal + emailList[i - 1]);
             }
         }
     });
@@ -143,7 +144,7 @@ $(function () {
     //movable login area
     var _move = false;//移动标记  
     var _x, _y;//鼠标离控件左上角的相对位置  
-    $(".login-area").click(function () {
+    $(".moving-area").click(function () {
     }).mousedown(function (e) {
         _move = true;
         _x = e.pageX - parseInt($(".login-area").css("left"));
