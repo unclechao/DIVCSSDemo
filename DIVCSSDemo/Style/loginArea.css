@@ -13,6 +13,7 @@
     top: 42px;
     left: 0px;
     z-index: 99;
+    cursor: move;
 }
 
     /*登录*/
@@ -143,9 +144,10 @@
     font-size: 12px;
     visibility: hidden;
     position: absolute;
-    width: 200px;
-    height: 63px;
+    width: 201px;
+    height: 64px;
     border: 1px solid rgb(208,208,208);
+    margin-left: -1px;
     background-color: White;
     overflow: hidden;
     cursor: pointer;

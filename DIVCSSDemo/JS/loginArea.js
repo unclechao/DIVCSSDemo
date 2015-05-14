@@ -58,8 +58,14 @@ $(function () {
         $(".right-content-warning").css("visibility", "hidden");
     }).mouseover(function () {
         $("#closeIcon").css("visibility", "visible");
+        if ($("#email").val().trim() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
+            $("#email").val(" ");
+        }
     }).mouseout(function () {
         $("#closeIcon").css("visibility", "hidden");
+        if ($("#email").val().trim() == "" || $("#email").val() == "微博/博客/邮箱/手机") {
+            $("#email").val("微博/博客/邮箱/手机").css("color", "rgb(208,208,208)");
+        }
     });
 
     //关闭图标
@@ -167,6 +173,7 @@ function setStyle(obj) {
     $(obj).css("background-color", "rgb(240,240,240)");
     $("div #" + oldIndex).css("background-color", "white");
     setValue(newIndex, $("#email"));
+    $("#email").css("color", "black");
 }
 //鼠标移出取消样式
 function cancelStyle(obj) {
